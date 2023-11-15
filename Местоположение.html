@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Носочки - Местоположение</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <style>
+/* Стили для слайдера */
+.swiper-container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.swiper-slide img {
+    width: 30%;
+    height: auto;
+    max-width: 50%; /* Новый стиль для максимальной ширины изображения */
+}
+
+/* Стили для кнопок управления, если нужно */
+.swiper-button-next,
+.swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
+    background-color: #333;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.swiper-button-next {
+    right: 10px;
+}
+
+.swiper-button-prev {
+    left: 10px;
+}
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('Фон.jpg');
+            text-align: center; 
+        }
+
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        nav li {
+            float: left;
+        }
+
+        nav a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        nav a.active {
+            background-color: #555;
+        }
+
+        h2 {
+            text-align: center; 
+        }
+
+        .map-container {
+            width: 80%;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            < <li><a href="Главная.html">Главная</a></li>
+            <li><a href="Каталог.html">Каталог</a></li>
+            <li><a href="Контакты.html">Контакты</a></li>
+            <li><a href="Местоположение.html">Местоположение</a></li>
+            <li><a href="admin.html">Администрация</a></li>
+        </ul>
+    </nav>
+
+    <h2>Местоположение</h2>
+
+    <div class="map-container">
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4af7a58d34f62f2f84ea2b4bbfa0b473793fb414c12fa2003421f07b9d24f293&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=true"></script>
+    </div>
+    <div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="1.jpg" alt="Slide 1"></div>
+        <div class="swiper-slide"><img src="2.jpg" alt="Slide 2"></div>
+        <div class="swiper-slide"><img src="3.jpg" alt="Slide 3"></div>
+       
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    </div>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        autoplay: {
+            delay: 3000, // Задержка между переключениями в миллисекундах (в данном случае 3 секунды)
+            disableOnInteraction: false, // Отключение автопереключения при взаимодействии пользователя
+        },
+        speed: 800, // Скорость переключения в миллисекундах (в данном случае 0.8 секунды)
+    });
+</script>
+
+</body>
+</html>
